@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <label>Enter Subject Marks</label><br>
+    <input type="text" id="marathi" placeholder="Enter marks marathi"><br><br>
+    <input type="text" id="english" placeholder="Enter marks English"><br><br>
+    <input type="text" id="maths" placeholder="Enter marks Maths"><br><br>
+
+    <button onclick="fun()">click</button><br><br>
+    <span id="res1">**</span><br><br>
+    <span id="res2">**</span><br><br>
+    <span id="res3">**</span><br><br>
+    
+    
+</head>
+<body>
+    <script>
+
+     function fun(){
+       let marathi = Number(document.getElementById("marathi").value);
+       let english = Number(document.getElementById("english").value);
+       let maths = Number(document.getElementById("maths").value);
+       
+       let add = marathi + english + maths;
+       document.getElementById("res1").innerHTML = "addtiion is" + add;
+
+       let per = (add/300)*100;
+       document.getElementById("res2").innerHTML = "percentage is" + per;
+       
+       if(per>=80){
+           
+           document.getElementById("res3").innerHTML = "grade A";
+        }else if(per>60 && per<80){
+            
+            document.getElementById("res3").innerHTML = "grade B";
+        }else if(per>45 && per<60){
+            
+            document.getElementById("res3").innerHTML = "grade C";
+        }else{
+            
+            document.getElementById("res3").innerHTML = "Fail";
+        }
+
+        
+
+       
+
+     }
+
+
+
+
+    </script>
+
+
+
+</body>
+</html>
